@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { decrementCounter } from './actions';
+import { decrementCounter } from '../actions';
 import GenericButton from './GenericButton';
 import PropTypes from 'prop-types';
 
