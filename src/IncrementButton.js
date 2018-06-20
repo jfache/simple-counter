@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { incrementCounter } from './actions';
 import GenericButton from './GenericButton';
+import PropTypes from 'prop-types';
 
 const mapStateToProps = () => {
     return {
@@ -14,7 +15,13 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     };
 };
 
-export default connect(
+const IncrementButton = connect(
     mapStateToProps,
     mapDispatchToProps
 )(GenericButton);
+
+IncrementButton.propTypes = {
+    step: PropTypes.number.isRequired
+};
+
+export default IncrementButton;
