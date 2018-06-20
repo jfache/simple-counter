@@ -1,0 +1,16 @@
+body {
+    padding-top: 100px;
+    text-align: center;
+}
+
+input[type='number'] {
+    text-align: center;
+    font-size: 50px;
+    width: 200px;
+}
+
+input[type='button'] {
+    font-size: 50px;
+    width: 50px;
+    text-align: center;
+}
