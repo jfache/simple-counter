@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Counter from './Counter';
-import { connect } from 'react-redux';
 
 class CounterContainer extends Component {
     render() {
@@ -8,10 +7,4 @@ class CounterContainer extends Component {
     }
 }
 
-function mapStateToProps({ count }) {
-    return {
-        count
-    };
-}
-
-export default connect(mapStateToProps)(CounterContainer);
+export default CounterContainer;

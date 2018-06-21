@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { incrementCounter } from '../actions';
 import GenericButton from './GenericButton';
 import PropTypes from 'prop-types';
+import { push } from 'connected-react-router';
 
 const mapStateToProps = () => {
     return {
@@ -10,8 +10,9 @@ const mapStateToProps = () => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
+    const nextValue = ownProps.count + ownProps.step;
     return {
-        onButtonClick: () => dispatch(incrementCounter(ownProps.step))
+        onButtonClick: () => dispatch(push('/' + nextValue))
     };
 };
 
@@ -21,6 +22,7 @@ const IncrementButton = connect(
 )(GenericButton);
 
 IncrementButton.propTypes = {
+    count: PropTypes.number.isRequired,
     step: PropTypes.number.isRequired
 };
 

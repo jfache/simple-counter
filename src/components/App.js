@@ -8,9 +8,17 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <DecrementButton step={this.props.step} />
-                <CounterContainer />
-                <IncrementButton step={this.props.step} />
+                <DecrementButton
+                    count={parseInt(this.props.match.params.count, 10)}
+                    step={this.props.step}
+                />
+                <CounterContainer
+                    count={parseInt(this.props.match.params.count, 10)}
+                />
+                <IncrementButton
+                    count={parseInt(this.props.match.params.count, 10)}
+                    step={this.props.step}
+                />
             </div>
         );
     }
