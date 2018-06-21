@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+2 branches are available:
+
+1.  `master`, where the state is fully managed by a Redux store (no router)
+2.  `with-router`, where the counter's count is pulled from the URL (Redux + router)
+
+To checkout the `with-router` branch, simply run `git checkout with-router`
+
 ## Available Scripts
 
 In the project directory, you can run:
